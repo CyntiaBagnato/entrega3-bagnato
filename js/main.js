@@ -195,13 +195,15 @@ botonCategorias.forEach(boton => {
 
         if(e.currentTarget.id != "todos"){
             
-            tituloP.innerText = "Todos los productos"
-
-        const productosCategorias = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
+           const cambioCategorias = productos.find(producto => producto.categoria.id === e.currentTarget.id);
+            tituloP.innerText = cambioCategorias.categoria.nombre;
+            
+            const productosCategorias = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
         cargarProductos(productosCategorias);
         } else{
             tituloP.innerText = "Todos los productos";
             cargarProductos(productos);
         }
     })
-})
+});
+
