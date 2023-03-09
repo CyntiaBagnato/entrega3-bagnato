@@ -65,7 +65,7 @@ const productos = [
       imagen:"../img/base 01.jpg",
        categoria: {
         nombre: "Bases",
-        id: "bases"
+        id: "bases",
     },
      precio: 2500
     },
@@ -75,7 +75,7 @@ const productos = [
           imagen:"../img/base 02.jpg",
            categoria: {
         nombre: "Bases",
-        id: "bases"
+        id: "bases",
     },
      precio: 3100
     },
@@ -85,7 +85,7 @@ const productos = [
           imagen:"../img/base 03.jpg",
            categoria: {
         nombre: "Bases",
-        id: "bases"
+        id: "bases",
     },
      precio: 1900
     },
@@ -97,7 +97,7 @@ const productos = [
           imagen:"../img/rimmel 1.jpg",
         categoria: {
             nombre: "Rimmel",
-            id: "rimmel"
+            id: "rimmel",
         },
          precio: 1200
         },
@@ -107,7 +107,7 @@ const productos = [
           imagen:"../img/rimmel 2.jpg",
         categoria: {
             nombre: "Rimmel",
-            id: "rimmel"
+            id: "rimmel",
         },
          precio: 1500
         },
@@ -117,7 +117,7 @@ const productos = [
           imagen:"../img/rimmel 3.jpg",
         categoria: {
             nombre: "Rimmel",
-            id: "rimmel"
+            id: "rimmel",
         },
          precio: 1300
         },
@@ -129,7 +129,7 @@ const productos = [
         imagen:"../img/delineador 1.jpg",
         categoria: {
             nombre: "Delineadores",
-            id: "delineadores"
+            id: "delineadores",
         },
          precio: 900
         },
@@ -139,7 +139,7 @@ const productos = [
         imagen:"../img/delineador 2.jpg",
         categoria: {
             nombre: "Delineadores",
-            id: "delineadores"
+            id: "delineadores",
         },
          precio: 850
         },
@@ -149,7 +149,7 @@ const productos = [
         imagen:"../img/delineador 3.jpg",
         categoria: {
             nombre: "Delineadores",
-            id: "delineadores"
+            id: "delineadores",
         },
         precio: 1100
     },
@@ -158,9 +158,11 @@ const productos = [
 
 const contenedorProductos = document.getElementById('productos');
 
-function cargarProductos(){
+function cargarProductos(productosElegidos){
 
-    productos.forEach(p =>{
+    contenedorProductos.innerHTML = "";
+
+    productosElegidos.forEach(p =>{
         
         const productosContainer = document.createElement('div');
         productosContainer.innerHTML=`
@@ -174,12 +176,32 @@ function cargarProductos(){
         </div>
         `;
 
-        contenedorProductos.appendChild(productosContainer);
+        contenedorProductos.append(productosContainer);
         
 })
 
 }
 
-cargarProductos();
+cargarProductos(productos);
  
+const botonCategorias = document.querySelectorAll(".boton-categoria");
+const tituloCategorias = document.querySelector("tituloP");
 
+botonCategorias.forEach(boton => {
+    boton.addEventListener("click", (e) =>{
+
+        botonCategorias.forEach(boton => boton.classList.remove("active"));
+        e.currentTarget.classList.add("active");
+
+        if(e.currentTarget.id != "todos"){
+            
+            tituloP.innerText = "Todos los productos"
+
+        const productosCategorias = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
+        cargarProductos(productosCategorias);
+        } else{
+            tituloP.innerText = "Todos los productos";
+            cargarProductos(productos);
+        }
+    })
+})
