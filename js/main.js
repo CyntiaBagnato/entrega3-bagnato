@@ -2,7 +2,7 @@ const productos = [
     {
     id: "sombra-01",
     titulo:"Sombra 01",
-    imagen:"../img/sombra 1.jpg",
+    imagen:"https://res.cloudinary.com/dxetszi0w/image/upload/v1677809285/Proyecto3/Sombras/80e7100b7e8345a5ac797d9027496c7c_fhlrim.jpg",
     categoria: {
         nombre: "Sombras",
         id:"sombras",},
@@ -11,7 +11,7 @@ const productos = [
     {
     id: "sombra-02",
     titulo:"Sombra 02",
-    imagen:"../img/sombra 2.jpg",
+    imagen:"https://res.cloudinary.com/dxetszi0w/image/upload/v1677809276/Proyecto3/Sombras/81ab9d3698d0de35c8d5d03b00f7b072_arueqg.jpg",
     categoria: {
         nombre: "Sombras",
         id:"sombras",
@@ -21,7 +21,7 @@ const productos = [
     {
     id: "sombra-03",
     titulo:"Sombra 03",
-    imagen:"../img/sombra 3.jpg",
+    imagen:"https://res.cloudinary.com/dxetszi0w/image/upload/v1677809249/Proyecto3/Sombras/7a46c351d6708f40ce55ff1e2dad15f1_ub6jyt.jpg",
     categoria: {
         nombre: "Sombras",
         id:"sombras",
@@ -31,7 +31,7 @@ const productos = [
 
     {id: "labial-01",
      titulo:"Labial 01",
-     imagen:"../img/labial 1.jpg",
+     imagen:"https://res.cloudinary.com/dxetszi0w/image/upload/v1677809557/Proyecto3/Labiales/8a6e35b7ab85b183ca7f67f1c2fb05b2_mjk3xd.jpg",
      categoria: {
         nombre: "Labiales",
         id:"labiales",
@@ -41,7 +41,7 @@ const productos = [
     {
         id: "labial-02",
      titulo:"Labial 02",
-     imagen:"../img/labial 2.jpg",
+     imagen:"https://res.cloudinary.com/dxetszi0w/image/upload/v1677809547/Proyecto3/Labiales/189587a29296f6d99f37fff743d2c1d0_ar31zp.jpg",
      categoria: {
         nombre: "Labiales",
         id:"labiales",
@@ -51,7 +51,7 @@ const productos = [
     {
         id: "labial-03",
      titulo:"Labial 03",
-     imagen:"../img/labial 3.jpg",
+     imagen:"https://res.cloudinary.com/dxetszi0w/image/upload/v1677809387/Proyecto3/Labiales/7da25503ba62175a06a4502447d14812_nswsro.jpg",
      categoria: {
         nombre: "Labiales",
         id:"labiales",
@@ -62,7 +62,7 @@ const productos = [
     {
         id: "base-01",
      titulo:"Base 01",
-      imagen:"../img/base 01.jpg",
+      imagen:"https://res.cloudinary.com/dxetszi0w/image/upload/v1677809589/Proyecto3/Bases/921dd790afd856f9a7c25b8485a135ad_sbt3fm.jpg",
        categoria: {
         nombre: "Bases",
         id: "bases",
@@ -72,7 +72,7 @@ const productos = [
     {
         id: "base-02",
          titulo:"Base 02",
-          imagen:"../img/base 02.jpg",
+          imagen:"https://res.cloudinary.com/dxetszi0w/image/upload/v1677809584/Proyecto3/Bases/8f83768548ee2c93ab4c8cccb984425b_b4aqrf.jpg",
            categoria: {
         nombre: "Bases",
         id: "bases",
@@ -82,7 +82,7 @@ const productos = [
     {
         id: "base-03",
          titulo:"Base 03",
-          imagen:"../img/base 03.jpg",
+          imagen:"https://res.cloudinary.com/dxetszi0w/image/upload/v1677809580/Proyecto3/Bases/8d73ba4cb7833cd823c29ccd546bdcb2_uawqtc.jpg",
            categoria: {
         nombre: "Bases",
         id: "bases",
@@ -94,7 +94,7 @@ const productos = [
     {
         id: "Rimmel-01",
         titulo:"Rimmel 0l",
-          imagen:"../img/rimmel 1.jpg",
+          imagen:"https://res.cloudinary.com/dxetszi0w/image/upload/v1677809699/Proyecto3/Rimmel/fee232762a607a0b8bb1eb066ae6dc13_ojygur.jpg",
         categoria: {
             nombre: "Rimmel",
             id: "rimmel",
@@ -104,7 +104,7 @@ const productos = [
     {
         id: "Rimmel-02",
         titulo:"Rimmel 02",
-          imagen:"../img/rimmel 2.jpg",
+          imagen:"https://res.cloudinary.com/dxetszi0w/image/upload/v1677809662/Proyecto3/Rimmel/8d2ac1c2cb9202f75866cde301181a00_xmxt4g.jpg",
         categoria: {
             nombre: "Rimmel",
             id: "rimmel",
@@ -114,7 +114,7 @@ const productos = [
     {
         id: "Rimmel-03",
         titulo:"Rimmel 03",
-          imagen:"../img/rimmel 3.jpg",
+          imagen:"https://res.cloudinary.com/dxetszi0w/image/upload/v1677809649/Proyecto3/Rimmel/95578fafaa235f6bfcd27b0ac3dc45f7_jfllti.jpg",
         categoria: {
             nombre: "Rimmel",
             id: "rimmel",
@@ -126,7 +126,7 @@ const productos = [
     {
         id: "Delineador-01",
         titulo:"Delineador 01",
-        imagen:"../img/delineador 1.jpg",
+        imagen:"https://res.cloudinary.com/dxetszi0w/image/upload/v1677809757/Proyecto3/Delineadores/b46cef037697603db127cf38397a0835_yar5oa.jpg",
         categoria: {
             nombre: "Delineadores",
             id: "delineadores",
@@ -136,7 +136,7 @@ const productos = [
     {
         id: "Delineador-02",
         titulo:"Delineador 02",
-        imagen:"../img/delineador 2.jpg",
+        imagen:"https://res.cloudinary.com/dxetszi0w/image/upload/v1677809734/Proyecto3/Delineadores/362466da4cc8d8425d977ed2be03c1d8_szqp9x.jpg",
         categoria: {
             nombre: "Delineadores",
             id: "delineadores",
@@ -146,7 +146,7 @@ const productos = [
     {
         id: "Delineador-03",
         titulo:"Delineador 03",
-        imagen:"../img/delineador 3.jpg",
+        imagen:"https://res.cloudinary.com/dxetszi0w/image/upload/v1677809809/Proyecto3/Delineadores/330333bf67c360998789e2809d83e3f6_ohxub8.jpg",
         categoria: {
             nombre: "Delineadores",
             id: "delineadores",
