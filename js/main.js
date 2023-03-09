@@ -157,6 +157,10 @@ const productos = [
 ]
 
 const contenedorProductos = document.getElementById('productos');
+const botonCategorias = document.querySelectorAll(".boton-categoria");
+const tituloCategorias = document.querySelector("tituloP");
+let botonAgregar = document.querySelectorAll(".producto-agregar");
+const cantidadCarrito = document.querySelector("#numerito");
 
 function cargarProductos(productosElegidos){
 
@@ -170,7 +174,7 @@ function cargarProductos(productosElegidos){
         <img src="${p.imagen}" alt="imagen producto">
         <div class="producto-detalles">
              <h3 class="producto-titulo">${p.titulo}</h3>
-             <p class="producto-precio">${p.precio}</p>
+             <p class="producto-precio">$ ${p.precio}</p>
              <button class="producto-agregar" id="${p.id}">Agregar</button>
         </div>
         </div>
@@ -179,13 +183,12 @@ function cargarProductos(productosElegidos){
         contenedorProductos.append(productosContainer);
         
 })
-
+botonAgregarActualizar();
 }
 
 cargarProductos(productos);
  
-const botonCategorias = document.querySelectorAll(".boton-categoria");
-const tituloCategorias = document.querySelector("tituloP");
+
 
 botonCategorias.forEach(boton => {
     boton.addEventListener("click", (e) =>{
@@ -207,3 +210,39 @@ botonCategorias.forEach(boton => {
     })
 });
 
+
+
+function botonAgregarActualizar(){
+    botonAgregar = document.querySelectorAll(".producto-agregar");
+
+    botonAgregar.forEach(boton => {
+        boton.addEventListener("click", agregarAlCarrito);
+    })
+};
+
+
+const carritoConProductos = [];
+
+
+function agregarAlCarrito(e){
+
+    const idProd = e.currentTarget.id;
+    const prodAgregado = productos.find(producto => producto.id === idProd);
+
+    if(carritoConProductos.some(producto => producto.id === idProd)){
+        const Index = carritoConProductos.findIndex(producto => producto.id === idProd);
+        carritoConProductos[Index].cantidad++;
+    } else {
+        prodAgregado.cantidad = 1;
+        carritoConProductos.push(prodAgregado);
+    }
+    actualizarCantidadCarrito();
+
+    localStorage.setItem("carrito-con-productos", JSON.stringify(carritoConProductos));
+}
+
+
+function actualizarCantidadCarrito(){
+    let nuevaCantidadCarrito = carritoConProductos.reduce((acc, producto) => acc + producto.cantidad, 0);
+    cantidadCarrito.innerText= nuevaCantidadCarrito;
+}

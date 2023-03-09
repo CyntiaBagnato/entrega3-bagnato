@@ -172,7 +172,7 @@ img{
 }
 
 .carrito-vacio, .carrito-comprado{
-    display: ;
+    display: none ;
     color:var(--clr-main);
 }
 
