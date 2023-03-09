@@ -45,19 +45,13 @@ aside{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.logo{
-    font-weight: 400;
-    font-size: 1.5rem;
-    font-style: oblique;
+    justify-content: space-evenly;
 }
 
 .menu{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .boton-aside{
@@ -163,91 +157,3 @@ img{
     color: var(--clr-main-light);
 }
 
-/* carrito */
-
-.contenedor-carrito{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.carrito-vacio, .carrito-comprado{
-    display: none ;
-    color:var(--clr-main);
-}
-
-.carrito-contenidos{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.carrito-contenido{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--clr-pinkl);
-    color: var(--clr-white);
-    padding: .5rem;
-    padding-right: 1.5rem;
-    border-radius: 1rem;
-}
-
-.carrito-contenido-imagen{
-    width: 6rem;
-    height: 6rem;
-    border-radius: 1rem;
-}
-
-.carrito-contenido small{
-    font-size: 1rem;
-}
-
-.carrito-contenido-eliminar{
-    border: 0;
-    background-color: transparent;
-    color: var(--clr-red);
-    cursor: pointer;
-}
-
-.carrito-acciones{
-    display: flex;
-    justify-content: space-between;
-}
-
-.carrito-vaciar{
-    border: 0;
-    background-color: var(--clr-gray);
-    padding: 1rem;
-    border-radius: 1rem;
-    color: var(--clr-main-light);
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.carrito-d{
-    display: flex;
-
-}
-
-.total-compra{
-    display: flex;
-    background-color: var(--clr-pinkl);
-    padding: 1rem;
-    color: var(--clr-main);
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    text-transform: uppercase;
-    gap: 1rem;
-}
-
-.pagar{
-    border: 0;
-    background-color: var(--clr-main);
-    padding: 1rem;
-    color: var(--clr-main-light);
-    text-transform: uppercase;
-    cursor: pointer;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-}
